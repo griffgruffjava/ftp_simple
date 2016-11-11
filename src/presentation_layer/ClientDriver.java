@@ -87,7 +87,7 @@ public class ClientDriver {
                                 System.out.print("enter name of file to download:");
                                 title = input.next();
                                 response = ftpClient.downloadFile(user, title);
-                                if(PresentationUtils.getCode(response)==1350){
+                                if(PresentationUtils.getCode(response)==1315){
                                     System.out.println("File has been downloaded");
                                 }else {
                                     System.out.println(response);
