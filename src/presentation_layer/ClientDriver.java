@@ -83,6 +83,18 @@ public class ClientDriver {
                                 }
                             }
 
+                            if(menuTwoChoice == 2){
+                                System.out.print("enter name of file to download:");
+                                title = input.next();
+                                response = ftpClient.downloadFile(user, title);
+                                if(PresentationUtils.getCode(response)==1350){
+                                    System.out.println("File has been downloaded");
+                                }else {
+                                    System.out.println(response);
+                                    System.out.println("File could not be found");
+                                }
+                            }
+
                             if(menuTwoChoice==3){
                                 response = ftpClient.logOff(user,password);
                                 if(PresentationUtils.getCode(response)==1110){
@@ -97,15 +109,7 @@ public class ClientDriver {
                         System.out.println("\nThe login details provided are not correct\n\n");
                     }
 
-
-
-
-
-
                 }
-
-
-
 
             }
             System.out.println("\n\nThank you for using Simple_FTP, Goodbye!");
