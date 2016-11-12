@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
 /**
  * Created by t00175569 on 10/11/2016.
  */
-public class FtpClient {
+public class      FtpClient {
     private MyClientDatagramSocket clientSocket;
     private InetAddress serverHost;
     private int serverPort;
